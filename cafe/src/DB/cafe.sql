@@ -27,7 +27,7 @@ DROP SEQUENCE product_pseq;
 
 
 
-/* Create Sequences */
+/* Create Sequences   */
 
 CREATE SEQUENCE cart_cseq INCREMENT BY 1 START WITH 1;
 CREATE SEQUENCE odetail_odseq INCREMENT BY 1 START WITH 1;
