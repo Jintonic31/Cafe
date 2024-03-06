@@ -1,14 +1,8 @@
 
-/* Drop Triggers */
-
-DROP TRIGGER TRI_cart_cseq;
-DROP TRIGGER TRI_odetail_odseq;
-DROP TRIGGER TRI_orders_oseq;
-DROP TRIGGER TRI_product_pseq;
 
 
 
-/* Drop Tables */
+/* Drop Tables 
 
 DROP TABLE cart CASCADE CONSTRAINTS;
 DROP TABLE odetail CASCADE CONSTRAINTS;
@@ -16,24 +10,28 @@ DROP TABLE orders CASCADE CONSTRAINTS;
 DROP TABLE members CASCADE CONSTRAINTS;
 DROP TABLE product CASCADE CONSTRAINTS;
 
+*/
 
 
-/* Drop Sequences */
 
-DROP SEQUENCE SEQ_cart_cseq;
-DROP SEQUENCE SEQ_odetail_odseq;
-DROP SEQUENCE SEQ_orders_oseq;
-DROP SEQUENCE SEQ_product_pseq;
+/* Drop Sequences 
+
+DROP SEQUENCE cart_cseq;
+DROP SEQUENCE odetail_odseq;
+DROP SEQUENCE orders_oseq;
+DROP SEQUENCE product_pseq;
+
+*/
 
 
 
 
 /* Create Sequences */
 
-CREATE SEQUENCE SEQ_cart_cseq INCREMENT BY 1 START WITH 1;
-CREATE SEQUENCE SEQ_odetail_odseq INCREMENT BY 1 START WITH 1;
-CREATE SEQUENCE SEQ_orders_oseq INCREMENT BY 1 START WITH 1;
-CREATE SEQUENCE SEQ_product_pseq INCREMENT BY 1 START WITH 1;
+CREATE SEQUENCE cart_cseq INCREMENT BY 1 START WITH 1;
+CREATE SEQUENCE odetail_odseq INCREMENT BY 1 START WITH 1;
+CREATE SEQUENCE orders_oseq INCREMENT BY 1 START WITH 1;
+CREATE SEQUENCE product_pseq INCREMENT BY 1 START WITH 1;
 
 
 
@@ -140,6 +138,22 @@ ALTER TABLE odetail
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 /* Create Triggers */
 
 CREATE OR REPLACE TRIGGER TRI_cart_cseq BEFORE INSERT ON cart
@@ -182,6 +196,11 @@ END;
 
 /
 
+/* Drop Triggers */
 
+DROP TRIGGER TRI_cart_cseq;
+DROP TRIGGER TRI_odetail_odseq;
+DROP TRIGGER TRI_orders_oseq;
+DROP TRIGGER TRI_product_pseq;
 
 
